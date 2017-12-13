@@ -29,7 +29,7 @@ attr_accessor :total, :discount
       end
   end
 
-  def self.items
+  def items
 @@items
   end
 
