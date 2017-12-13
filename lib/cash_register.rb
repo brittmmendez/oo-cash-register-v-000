@@ -18,10 +18,11 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
-    if @discount==1
+    if @discount==0
       puts" There is no discount to apply."
     else
-    @total=(@total*@discount)
+      100-(100*(20/100)
+    @total=@total-(@total*(@discount/100))
     puts "After the discount, the total comes to $#{@total}"
   end
   end
