@@ -16,7 +16,7 @@ attr_accessor :total, :discount
     cost=price*quantity
     @total=(cost+@total)
 
-    @@items+= [title]*quantity
+    @@items.concat([title] * quantity)
 
   end
 
