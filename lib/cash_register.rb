@@ -15,7 +15,7 @@ attr_accessor :total, :discount
   def add_item(title,price,quantity=1)
     cost=price*quantity
     @total=(cost+@total)
-    (@@all_items<<"title")*quantity
+    (@@all_items<<title)*quantity
   end
 
   def apply_discount
