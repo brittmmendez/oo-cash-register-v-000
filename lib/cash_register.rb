@@ -16,12 +16,8 @@ attr_accessor :total, :discount
     cost=price*quantity
     @total=(cost+@total)
 
+    @@all_items.push(title) * quantity
 
-    counter=0
-    while counter <quantity
-    @@all_items<<title
-    counter+=1
-  end
   end
 
   def apply_discount
