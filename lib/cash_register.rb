@@ -7,6 +7,7 @@ attr_accessor :total, :discount
     @discount=discount.to_f
     @total=0
     @items=[]
+    @prices=[]
   end
 
   def total
@@ -18,7 +19,7 @@ attr_accessor :total, :discount
     @total=(cost+@total)
 
     @items.concat([title] * quantity)
-
+    @price.concat([price] * quantity)
   end
 
   def apply_discount
@@ -31,8 +32,10 @@ attr_accessor :total, :discount
   end
 
   def items
-@items
+    @items
   end
+
+  def void_last_transaction
 
 
 
