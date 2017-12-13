@@ -7,16 +7,16 @@ attr_accessor :total, :discount
     @discount=(1-discount)
     @total=0
   end
-  
+
   def total
     @total
   end
-  
+
   def add_item(title,price,quantity=1)
     cost=price*quantity
     @total=(cost+@total)
   end
-  
+
   def apply_discount
     if @discount==1
       puts" There is no discount to apply."
