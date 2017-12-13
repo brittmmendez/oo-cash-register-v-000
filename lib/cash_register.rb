@@ -19,7 +19,7 @@ attr_accessor :total, :discount
     @total=(cost+@total)
 
     @items.concat([title] * quantity)
-    @price.concat([price] * quantity)
+    @prices.concat([price] * quantity)
   end
 
   def apply_discount
