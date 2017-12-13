@@ -15,7 +15,13 @@ attr_accessor :total, :discount
   def add_item(title,price,quantity=1)
     cost=price*quantity
     @total=(cost+@total)
-    (@@all_items<<title)*quantity
+    
+    
+    counter=0
+    while counter <quantity
+    @@all_items<<title
+    counter+=1
+  end
   end
 
   def apply_discount
@@ -26,11 +32,11 @@ attr_accessor :total, :discount
       "After the discount, the total comes to $#{@total.to_i}."
       end
   end
-
+  
   def items
   @@all_items
   end
-
+    
 
 
 end
